@@ -3,7 +3,7 @@
 
 
 import Home from "@/app/components/Home";
-import { site,API_URL } from "../../config/index";
+import { API_URL, site } from "@/app/config";
 import { headers } from 'next/headers'
 
 
@@ -28,7 +28,7 @@ export default async function Verify({params}) {
 
   const res = await fetch(url);
   const data = await res.json();
-  console.log(data)
+  console.log('data', data)
   if (data?.success !== "exists") {
     
       content= <div className="col-span-12">No Page found!!</div>
