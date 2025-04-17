@@ -27,8 +27,9 @@ export default async function Verify({params}) {
   const url = `${API_URL}/${site}/${adminId}/${posterId}/${device}`;
 
   const res = await fetch(url);
+  console.log('res', res);
   const data = await res.json();
-  console.log('data', data)
+  console.log('data', data);
   if (data?.success !== "exists") {
     
       content= <div className="col-span-12">No Page found!!</div>
