@@ -9,7 +9,7 @@ import { headers } from 'next/headers'
 
 export default async function Verify({params}) {
   const { adminId, posterId} = params;
-  console.log(adminId,posterId)
+  console.log('params' , adminId,posterId)
   const headersList = headers()
   let content;
   const userAgent = headersList.get("user-agent")
